@@ -20,7 +20,7 @@ answerButtonsEl.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
 });
-
+//Timer
 function startTimer() {
   var timeInterval = setInterval(function () {
     if (timeLeft > 0) {
@@ -41,6 +41,7 @@ function resetTime() {
   timeLeft = 0;
 }
 
+//subtract time for wrong answer
 body.addEventListener("click", function (event) {
   if (event.target.classList.contains("wrong")) {
     console.log(event.target);
@@ -48,13 +49,14 @@ body.addEventListener("click", function (event) {
   }
 });
 
+//add point for correct answer
 body.addEventListener("click", function (event) {
   if (event.target.classList.contains("correct")) {
     questionsCorrect++;
     questionCounter.innerText = "Score " + questionsCorrect;
   }
 });
-
+//Start quiz
 function startGame() {
   startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
@@ -63,7 +65,7 @@ function startGame() {
   setNextQuestion();
   startTimer();
 }
-
+//Next Questions
 function setNextQuestion() {
   resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -82,14 +84,14 @@ function showQuestion(question) {
     answerButtonsEl.appendChild(button);
   });
 }
-
+//Reset State
 function resetState() {
   clearStatusClass(document.body);
   while (answerButtonsEl.firstChild) {
     answerButtonsEl.removeChild(answerButtonsEl.firstChild);
   }
 }
-
+//set buttons to correct and wrong answers and end quiz
 function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
@@ -116,7 +118,7 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
-
+//questions
 const questions = [
   {
     question:

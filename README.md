@@ -16,4 +16,4 @@ https://ajpicc3734.github.io/Coding-Quiz/
 
 ## ScreenShot
 
-![screenshot](./Assets/images/Capture.PNG)
+![screenshot](./assets/images/Capture.PNG)
