@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- countdown container -->
+      <h2 id="countdown"></h2>
+    </div>
+    <!-- questions and controls -->
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div class="questions" id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div><p id="questions-correct"></p></div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+      </div>
+    </div>
+    <!-- score container -->
+    <div id="score-container" class="score-Inputs hide">
+      <h2>Enter Your Initials and Score</h2>
+      <form action="">
+        <div class="init">
+          <label for="initials"></label>
+          <input
+            name="initials"
+            id="initialsInput"
+            type="text"
+            placeholder="Enter Initials"
+          />
+        </div>
+        <div class="time">
+          <label for="time"></label>
+          <input
+            name="time"
+            id="remainingTime"
+            type="text"
+            placeholder="Score"
+          />
+        </div>
+        <button class="btn" id="submit-btn">Submit Score</button>
+      </form>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
